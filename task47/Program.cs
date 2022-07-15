@@ -19,11 +19,12 @@ double[,] fillArray(int m, int n)
     }
     return newArray;
 }
+//Метод вывода массива в консоль
 void printArray(double[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (int j = 0; j < array.GetLength(0); j++)
+        for (int j = 0; j < array.GetLength(1); j++)
         {
             Console.Write($"{array[i,j]:F2} ");
         }
@@ -33,5 +34,5 @@ void printArray(double[,] array)
 
 //Создаём массив.
 double[,] doubleArray = fillArray(10, 10);
-//Вывод массива на печать на печать.
+//Вывод массива в консоль.
 printArray(doubleArray);
